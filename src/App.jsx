@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
 
 class App extends Component {
   state = {
@@ -9,20 +8,14 @@ class App extends Component {
   }
 
   handleChangingHue = event => {
-    const sliderThatChanged = event.target
-    const valueOfSlider = parseInt(sliderThatChanged.value)
     this.setState({ hue: event.target.value })
   }
 
   handleChangingSaturation = event => {
-    const sliderThatChanged = event.target
-    const valueOfSlider = parseInt(sliderThatChanged.value)
     this.setState({ saturation: event.target.value })
   }
 
   handleChangingLightness = event => {
-    const sliderThatChanged = event.target
-    const valueOfSlider = parseInt(sliderThatChanged.value)
     this.setState({ lightness: event.target.value })
   }
 
