@@ -26,6 +26,18 @@ class App extends Component {
     this.setState({ lightness: event.target.value })
   }
 
+  randomColor = () => {
+    const newHue = Math.floor(Math.random() * 360)
+    const newSaturation = Math.floor(Math.random() * 100)
+    const newLightness = Math.floor(Math.random() * 100)
+
+    this.setState({
+      hue: newHue,
+      saturation: newSaturation,
+      lightness: newLightness,
+    })
+  }
+
   render() {
     return (
       <body>
