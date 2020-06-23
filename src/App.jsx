@@ -32,13 +32,16 @@ class App extends Component {
         <main>
           <section>
             <h2>Color</h2>
-            <input
+            <article
               className="colorResult"
               style={{
-                backgroundColor: `(${this.state.hue}, ${this.state.saturation}%, ${this.state.lightness}%)`,
+                backgroundColor: `HSL(${this.state.hue}, ${this.state.saturation}%, ${this.state.lightness}%)`,
               }}
-            ></input>
-            <p>{`hsl(${this.state.hue}, ${this.state.saturation}%, ${this.state.lightness}%)`}</p>
+            ></article>
+            <p>{`HSL(${this.state.hue}, ${this.state.saturation}%, ${this.state.lightness}%)`}</p>
+            <button className="randomColor" onClick={this.randomColor}>
+              Random Color
+            </button>
           </section>
           <section>
             <article>
@@ -46,7 +49,7 @@ class App extends Component {
               <input
                 type="range"
                 min="0"
-                max="255"
+                max="360"
                 value={this.state.hue}
                 onChange={this.handleChangingHue}
               ></input>
