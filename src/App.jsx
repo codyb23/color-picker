@@ -32,8 +32,14 @@ class App extends Component {
         <main>
           <section>
             <h2>Color</h2>
+            <input
+              className="colorResult"
+              style={{
+                backgroundColor: `(${this.state.hue}, ${this.state.saturation}%, ${this.state.lightness}%)`,
+              }}
+            ></input>
+            <p>{`hsl(${this.state.hue}, ${this.state.saturation}%, ${this.state.lightness}%)`}</p>
           </section>
-          <div style={{ backgroundColor: currentColor }} value={{}}></div>
           <section>
             <article>
               <h2>H</h2>
