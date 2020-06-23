@@ -3,9 +3,9 @@ import HelloWorld from './components/HelloWorld'
 
 class App extends Component {
   state = {
-    hue: 0,
-    saturation: 0,
-    lightness: 0,
+    hue: Math.floor(Math.random() * 360),
+    saturation: Math.floor(Math.random() * 100),
+    lightness: Math.floor(Math.random() * 100),
   }
 
   handleChangingHue = event => {
