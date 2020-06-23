@@ -7,14 +7,33 @@ class App extends Component {
     saturation: 0,
     lightness: 0,
   }
+
+  handleChangingHue = event => {
+    const sliderThatChanged = event.target
+    const valueOfSlider = parseInt(sliderThatChanged.value)
+    this.setState({ hue: event.target.value })
+  }
+
+  handleChangingSaturation = event => {
+    const sliderThatChanged = event.target
+    const valueOfSlider = parseInt(sliderThatChanged.value)
+    this.setState({ saturation: event.target.value })
+  }
+
+  handleChangingLightness = event => {
+    const sliderThatChanged = event.target
+    const valueOfSlider = parseInt(sliderThatChanged.value)
+    this.setState({ lightness: event.target.value })
+  }
+
   render() {
     return (
       <body>
         <main>
           <section>
             <h2>Color</h2>
-            <div style={{ backgroundColor: currentColor }}></div>
           </section>
+          <div style={{ backgroundColor: currentColor }} value={{}}></div>
           <section>
             <article>
               <h2>H</h2>
@@ -22,8 +41,8 @@ class App extends Component {
                 type="range"
                 min="0"
                 max="255"
-                value=""
-                onChange=""
+                value={this.state.hue}
+                onChange={this.handleChangingHue}
               ></input>
             </article>
             <article>
@@ -32,8 +51,8 @@ class App extends Component {
                 type="range"
                 min="0"
                 max="100"
-                value=""
-                onChange=""
+                value={this.state.saturation}
+                onChange={this.handleChangingSaturation}
               ></input>
             </article>
             <article>
@@ -42,8 +61,8 @@ class App extends Component {
                 type="range"
                 min="0"
                 max="100"
-                value=""
-                onChange=""
+                value={this.state.lightness}
+                onChange={this.handleChangingLightness}
               ></input>
             </article>
           </section>
