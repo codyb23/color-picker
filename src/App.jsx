@@ -36,7 +36,7 @@ class App extends Component {
       <body>
         <main>
           <section>
-            <h2>Color</h2>
+            <h2>Color Picker</h2>
             <article
               className="colorResult"
               style={{

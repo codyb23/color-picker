@@ -37,4 +37,5 @@ article h2 {
 .colorResult {
   height: 4rem;
   width: 4rem;
+  border: .1rem solid black;
 }
