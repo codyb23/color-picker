@@ -7,16 +7,11 @@ class App extends Component {
     lightness: Math.floor(Math.random() * 100),
   }
 
-  handleChangingHue = event => {
-    this.setState({ hue: event.target.value })
-  }
+  handleChangingSlider = event => {
+    const value = event.target.value
+    const name = event.target.name
 
-  handleChangingSaturation = event => {
-    this.setState({ saturation: event.target.value })
-  }
-
-  handleChangingLightness = event => {
-    this.setState({ lightness: event.target.value })
+    this.setState({ [name]: value })
   }
 
   randomColor = () => {
@@ -52,31 +47,34 @@ class App extends Component {
             <article>
               <h2>H</h2>
               <input
+                name="hue"
                 type="range"
                 min="0"
                 max="360"
                 value={this.state.hue}
-                onChange={this.handleChangingHue}
+                onChange={this.handleChangingSlider}
               ></input>
             </article>
             <article>
               <h2>S</h2>
               <input
+                name="saturation"
                 type="range"
                 min="0"
                 max="100"
                 value={this.state.saturation}
-                onChange={this.handleChangingSaturation}
+                onChange={this.handleChangingSlider}
               ></input>
             </article>
             <article>
               <h2>L</h2>
               <input
+                name="lightness"
                 type="range"
                 min="0"
                 max="100"
                 value={this.state.lightness}
-                onChange={this.handleChangingLightness}
+                onChange={this.handleChangingSlider}
               ></input>
             </article>
           </section>
