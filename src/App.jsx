@@ -8,8 +8,7 @@ class App extends Component {
   }
 
   handleChangingSlider = event => {
-    const value = event.target.value
-    const name = event.target.name
+    const { value, name } = event.target
 
     this.setState({ [name]: value })
   }
