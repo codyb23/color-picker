@@ -15,7 +15,8 @@ body {
 main {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 section {
@@ -38,4 +39,8 @@ article h2 {
   height: 4rem;
   width: 4rem;
   border: .1rem solid black;
+}
+
+input {
+  width: 13rem;
 }
